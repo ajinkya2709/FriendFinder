@@ -1,1 +1,2 @@
-web: sh src/main/webapp
+web: sh src/main/webapp/index.jsp
+
