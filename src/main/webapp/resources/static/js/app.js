@@ -1,7 +1,7 @@
-var app = angular.module('app', ['ngRoute','ngResource']);
+var app = angular.module('friendFinder', ['ngRoute','ngResource']);
 app.config(function($routeProvider){
     $routeProvider
-        .when('/gallery',{
+        .when('/',{
             templateUrl: 'resources/static/views/gallery.html',
             controller: 'galleryController'
         })
