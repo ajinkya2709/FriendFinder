@@ -1,16 +1,15 @@
-var app = angular.module('friendFinder', ['ngRoute','ngResource']);
-app.config(function($routeProvider){
-    $routeProvider
-        .when('/',{
-            templateUrl: 'resources/static/views/gallery.html',
-            controller: 'galleryController'
-        })
-        .when('/contactus',{
-            templateUrl: 'resources/static/views/contactus.html',
-            controller: 'contactusController'
-        })
-        .otherwise(
-            { redirectTo: '/'}
-        );
+
+
+var app = angular.module('friendFinder', [
+    'ngRoute',
+    'ngResource',
+    'facebook',
+    'routes'
+])
+
+app.config(function($httpProvider,FacebookProvider) {
+    FacebookProvider.init({appId      : '135324250306699',
+        xfbml      : true,
+        version    : 'v2.8'});
 });
 
